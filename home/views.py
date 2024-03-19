@@ -56,3 +56,7 @@ def get_order(request):
             response = render(request, 'thanks.html', context=order_context)
 
             return response
+
+    response = render(request, 'index.html', context=context)
+
+    return response
