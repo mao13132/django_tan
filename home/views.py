@@ -2,6 +2,7 @@ import asyncio
 
 from django.shortcuts import render
 
+from data_site.modelPrice import PriceModel
 from data_site.modelsDataSite import DataSiteModel
 from home.formHome import FormHome
 from utils.logger.telegram.telegram_debug import Telegram
@@ -13,6 +14,8 @@ from utils.utils import change_number
 
 def index(request):
     settings_sql = DataSiteModel.objects.first()
+
+    price_list = PriceModel.objects.all()
 
     context = {
         'brand_name': settings_sql.brand_name,
@@ -26,6 +29,7 @@ def index(request):
         'og_image': 'images/IMG_7259.PNG',
         'format_tel': change_number(settings_sql.phone),
         'form': FormHome(),
+        'price_list': price_list,
 
     }
 
@@ -58,4 +62,4 @@ def get_order(request):
 
             return response
 
-    res = index(request)
+    return index(request)

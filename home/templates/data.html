@@ -6534,133 +6534,30 @@
                 </div>
             </div>
             <div class="t-container">
+                {% for price in price_list %}
                 <div class="t681__row t-row">
                     <div class="t-col t-col_2 t-prefix_2">
                         <div class="t681__title t-heading t-heading_sm" field="li_title__1493289538895">
-                            <div style="font-size: 20px;" data-customstyle="yes"><span style="font-family: TildaSans;">КЛАССИЧЕСКИЙ ЗАГАР</span>
+                            <div style="font-size: 20px;" data-customstyle="yes"><span style="font-family: TildaSans;">{{ price.name }}</span>
                             </div>
                         </div>
                     </div>
                     <div class="t-col t-col_6">
                         <div class="t681__tablewrapper">
                             <div class="t681__textwrapper">
-                                <div class="t681__descr t-descr t-descr_sm" field="li_descr__1493289538895">— первый душ
-                                    через 8 - 10 часов
+                                <div class="t681__descr t-descr t-descr_sm" field="li_descr__1493289538895">
+                                    {{ price.description }}
                                 </div>
                             </div>
                             <div class="t681__pricewrapper">
                                 <div class="t681__price t-heading t-heading_sm" field="li_title2__1493289538895"
-                                     data-redactor-toolbar="no">3000 ₽
+                                     data-redactor-toolbar="no">{{ price.price }} ₽
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="t681__row t-row">
-                    <div class="t-col t-col_2 t-prefix_2">
-                        <div class="t681__title t-heading t-heading_sm" field="li_title__1493289544768">
-                            <div style="font-size: 20px;" data-customstyle="yes"><span style="font-family: TildaSans;">Экспресс загар</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="t-col t-col_6">
-                        <div class="t681__tablewrapper">
-                            <div class="t681__textwrapper">
-                                <div class="t681__descr t-descr t-descr_sm" field="li_descr__1493289544768"><span
-                                        style="font-family: TildaSans;">— первый душ через 3 - 5 часов</span></div>
-                            </div>
-                            <div class="t681__pricewrapper">
-                                <div class="t681__price t-heading t-heading_sm" field="li_title2__1493289544768"
-                                     data-redactor-toolbar="no">4000 ₽
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="t681__row t-row">
-                    <div class="t-col t-col_2 t-prefix_2">
-                        <div class="t681__title t-heading t-heading_sm" field="li_title__1493292137724">
-                            <div style="font-size: 20px;" data-customstyle="yes"><span style="font-family: TildaSans;">Биопилинг</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="t-col t-col_6">
-                        <div class="t681__tablewrapper">
-                            <div class="t681__textwrapper">
-                                <div class="t681__descr t-descr t-descr_sm" field="li_descr__1493292137724">
-                                    <span style="font-family: TildaSans;">— очищает и устраняет пот, жир, косметические средства, питает кожу и выравнивает её структуру</span>
-                                </div>
-                            </div>
-                            <div class="t681__pricewrapper">
-                                <div class="t681__price t-heading t-heading_sm" field="li_title2__1493292137724"
-                                     data-redactor-toolbar="no">600 ₽
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="t681__row t-row">
-                    <div class="t-col t-col_2 t-prefix_2">
-                        <div class="t681__title t-heading t-heading_sm" field="li_title__1692862749399">
-                            <div style="font-size: 20px;" data-customstyle="yes"><span style="font-family: TildaSans;">Опудривание финиш пудрой</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="t-col t-col_6">
-                        <div class="t681__tablewrapper">
-                            <div class="t681__textwrapper">
-                                <div class="t681__descr t-descr t-descr_sm" field="li_descr__1692862749399">
-                                    — финиш пудра - косметическая процедура, устраняет липкость после загара, фиксирует
-                                    загар, дает возможность комфортно клиенту ходить до первого душа!
-                                </div>
-                            </div>
-                            <div class="t681__pricewrapper">
-                                <div class="t681__price t-heading t-heading_sm" field="li_title2__1692862749399"
-                                     data-redactor-toolbar="no">600 ₽
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="t681__row t-row">
-                    <div class="t-col t-col_2 t-prefix_2">
-                        <div class="t681__title t-heading t-heading_sm" field="li_title__1709029353324">Душ</div>
-                    </div>
-                    <div class="t-col t-col_6">
-                        <div class="t681__tablewrapper">
-                            <div class="t681__textwrapper">
-                                <div class="t681__descr t-descr t-descr_sm" field="li_descr__1709029353324">
-                                    — п
-                                    <span style="font-family: TildaSans;">
-                                                еред загаром вы можете принять душ, вам не потребуется в жару или после рабочего дня ехать домой, чтобы подготовиться к загару. Теперь вы можете сделать это у нас в академии.
-                                            </span>
-                                </div>
-                            </div>
-                            <div class="t681__pricewrapper">
-                                <div class="t681__price t-heading t-heading_sm" field="li_title2__1709029353324"
-                                     data-redactor-toolbar="no">600 ₽
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="t681__row t-row">
-                    <div class="t-col t-col_2 t-prefix_2">
-                        <div class="t681__title t-heading t-heading_sm" field="li_title__1693200929663">
-                            <div style="font-size: 20px;" data-customstyle="yes"><span style="font-family: TildaSans;">Выезд мастера</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="t-col t-col_6">
-                        <div class="t681__tablewrapper">
-                            <div class="t681__textwrapper">
-                                <div class="t681__descr t-descr t-descr_sm" field="li_descr__1693200929663">
-                                    — в<span style="font-family: TildaSans;">ыезд мастера на дом рассчитывается индивидуально от адреса и количества человек</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
         <style>
