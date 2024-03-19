@@ -36,12 +36,10 @@ class Telegram:
 
             return False
 
-    async def new_order(self, data):
-
-        text = data['text']
+    async def new_order(self, text):
 
         url_req = "https://api.telegram.org/bot" + self.TOKEN + "/sendMessage" + "?chat_id=" + \
-                  self.ADMIN_TELEGRAM + "&text=" + text
+                  self.ID_CHAT + '&parse_mode=html' + "&text=" + text
 
         try:
 
@@ -50,12 +48,12 @@ class Telegram:
                     response = await resul.text()
 
                     if resul.status != 200:
-                        logging.warning(f'ошибка при отправке заявки telegram debugger. Код "{resul.status}" "{data}"')
+                        logging.warning(f'ошибка при отправке заявки telegram debugger. Код "{resul.status}" "{text}"')
 
                     return response
 
         except Exception as es:
 
-            logging.warning(f'Ошибка при отправке заявки в телеграм "{es}" "{data}"')
+            logging.warning(f'Ошибка при отправке заявки в телеграм "{es}" "{text}"')
 
             return False

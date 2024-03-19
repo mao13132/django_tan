@@ -24,6 +24,7 @@ from tan import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
+    path('thanks/', index, name='thanks'),
 ]
 
 if settings.DEBUG:
