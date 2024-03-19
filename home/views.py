@@ -28,6 +28,12 @@ context = {
 
 
 def index(request):
+    response = render(request, 'index.html', context=context)
+
+    return response
+
+
+def get_order(request):
     if request.method == "POST":
         form = FormHome(request.POST)
 
@@ -40,8 +46,13 @@ def index(request):
                    f'Имя: {name}%0A' \
                    f'Телефон: <code>{phone}</code>'
 
-            asyncio.run(Telegram().new_order(_msg))
+            # asyncio.run(Telegram().new_order(_msg))
 
-    response = render(request, 'index.html', context=context)
+            order_context = {
+                'name': name,
+                'phone': phone
+            }
 
-    return response
+            response = render(request, 'thanks.html', context=order_context)
+
+            return response

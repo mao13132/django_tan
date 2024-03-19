@@ -18,13 +18,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from home.views import index
+from home.views import index, get_order
 from tan import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    path('thanks/', index, name='thanks'),
+    path('thanks/', get_order, name='thanks'),
 ]
 
 if settings.DEBUG:

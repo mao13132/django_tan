@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block header %}
+
+<title>Заявка принята</title>
+
+<link rel="stylesheet" href="{% static 'css/thanks.css' %}" type="text/css" media="print" onload="this.media='all';"
+      onerror="this.loaderr='y';"/>
+{% endblock %}
+
+
+{% block data %}
+
+
+<div class="data-thanks">
+    <div class="text-wrapper">
+        {{ name }}, Ваша заявка принята!
+    </div>
+    <div class="alarm">Пожалуйста включите телефон {{ phone }}, оператор в ближайшее время позвонит Вам!</div>
+    <a href="/" class="back">Назад</a>
+</div>
+
+{% endblock %}

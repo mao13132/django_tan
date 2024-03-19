@@ -1,0 +1,41 @@
+.t396__carrier,
+.t396__filter {
+    z-index: -1;
+}
+
+.data-thanks {
+    height: 50%;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.text-wrapper {
+    margin-top: 200px;
+    font-size: 80px;
+}
+
+.alarm {
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.back {
+    border: 1px solid black;
+    background-color: #f2c199;
+    text-decoration: none;
+    color: #fff !important;
+    padding: 25px 100px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        display: none;
+    }
+
+    .text-wrapper {
+
+        margin-top: 20px;
+    }
+}
