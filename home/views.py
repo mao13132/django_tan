@@ -1,9 +1,13 @@
 from django.shortcuts import render
 
+from utils.utils import change_number
+
 # TODO проверить og
 
+tel = '+71111111111'
+
 context = {
-    'tel': '+79999999999',
+    'tel': tel,
     'instagram': '#',
     'title': 'Проверка',
     'og_url': 'localhost',
@@ -13,6 +17,7 @@ context = {
     'keywords': 'моментальный загар эко загар автозагар солярий',
     'og_description': 'Быстро. Качественно. Профессионально.',
     'og_image': 'images/IMG_7259.PNG',
+    'format_tel': change_number(tel),
 
 }
 
