@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
     'data_site.apps.DataSiteConfig',
+    'orders.apps.OrdersConfig',
 ]
 
 MIDDLEWARE = [

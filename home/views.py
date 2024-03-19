@@ -5,6 +5,7 @@ from django.shortcuts import render
 from data_site.modelPrice import PriceModel
 from data_site.modelsDataSite import DataSiteModel
 from home.formHome import FormHome
+from orders.models import OrderModel
 from utils.logger.telegram.telegram_debug import Telegram
 from utils.utils import change_number
 
@@ -46,6 +47,19 @@ def get_order(request):
             name = form.cleaned_data['name']
 
             phone = form.cleaned_data['phone']
+
+            order = OrderModel()
+
+            order.name = name
+
+            order.phone = phone
+
+            try:
+                order.id_client = request.COOKIES['sessionid']
+            except:
+                pass
+
+            order.save()
 
             _msg = f'✅ Новая заявка {phone}%0A%0A' \
                    f'Имя: {name}%0A' \
