@@ -1,0 +1,170 @@
+{% load static %}
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!--metatextblock-->
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}"/>
+<meta name="keywords" content="{{ keywords }}"/>
+<meta property="og:url" content="{{ og_url }}"/>
+<meta property="og:title" content="{{ title }}"/>
+<meta property="og:description" content="{{ og_description }}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="{% static '{{ og_image }}' %}"/>
+<link rel="canonical" href="{{ og_url }}"/>
+<!--/metatextblock-->
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="x-dns-prefetch-control" content="on"/>
+<link rel="shortcut icon" href="{% static 'favicon_1.ico' %}" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="{% static 'images/i_1.png' %}"/>
+<link rel="apple-touch-icon" sizes="76x76" href="{% static 'images/i_1.png' %}"/>
+<link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/i_1.png' %}"/>
+<meta name="msapplication-TileColor" content="#fffffa"/>
+<!-- Assets -->
+<script src="{% static 'js/tilda-fallback-1.0.min.js' %}" async="" charset="utf-8"></script>
+<link rel="stylesheet" href="{% static 'css/tilda-grid-3.0.min.css' %}" type="text/css" media="all" onerror="this.loaderr='y';"/>
+<link rel="stylesheet" href="{% static 'css/tilda-blocks-page38993393.min.css' %}" type="text/css" media="all"
+      onerror="this.loaderr='y';"/>
+<link rel="stylesheet" href="{% static 'css/tilda-animation-2.0.min.css' %}" type="text/css" media="all"
+      onerror="this.loaderr='y';"/>
+<link rel="stylesheet" href="{% static 'css/tilda-slds-1.4.min.css' %}" type="text/css" media="print" onload="this.media='all';"
+      onerror="this.loaderr='y';"/>
+<noscript>
+    <link rel="stylesheet" href="{% static 'css/tilda-slds-1.4.min.css' %}" type="text/css"
+          media="all"/>
+</noscript>
+<link rel="stylesheet" href="{% static 'css/tilda-forms-1.0.min.css' %}" type="text/css" media="all" onerror="this.loaderr='y';"/>
+<link rel="stylesheet" href="{% static 'css/tilda-zoom-2.0.min.css' %}" type="text/css" media="print" onload="this.media='all';"
+      onerror="this.loaderr='y';"/>
+<noscript>
+    <link rel="stylesheet" href="{% static 'css/tilda-zoom-2.0.min.css' %}" type="text/css"
+          media="all"/>
+</noscript>
+<link rel="stylesheet" href="{% static 'css/fonts-tildasans.css' %}" type="text/css" media="all" onerror="this.loaderr='y';"/>
+<script nomodule="" src="{% static 'js/tilda-polyfill-1.0.min.js' %}" charset="utf-8"></script>
+<script type="text/javascript">
+            function t_onReady(func) {
+                if (document.readyState != "loading") {
+                    func();
+                } else {
+                    document.addEventListener("DOMContentLoaded", func);
+                }
+            }
+            function t_onFuncLoad(funcName, okFunc, time) {
+                if (typeof window[funcName] === "function") {
+                    okFunc();
+                } else {
+                    setTimeout(function () {
+                        t_onFuncLoad(funcName, okFunc, time);
+                    }, time || 100);
+                }
+            }
+            function t_throttle(fn, threshhold, scope) {
+                return function () {
+                    fn.apply(scope || this, arguments);
+                };
+            }
+            function t396_initialScale(t) {
+                t = document.getElementById("rec" + t);
+                if (t) {
+                    t = t.querySelector(".t396__artboard");
+                    if (t) {
+                        var e,
+                            r = document.documentElement.clientWidth,
+                            a = [];
+                        if ((l = t.getAttribute("data-artboard-screens"))) for (var l = l.split(","), i = 0; i < l.length; i++) a[i] = parseInt(l[i], 10);
+                        else a = [320, 480, 640, 960, 1200];
+                        for (i = 0; i < a.length; i++) {
+                            var o = a[i];
+                            o <= r && (e = o);
+                        }
+                        var n = "edit" === window.allrecords.getAttribute("data-tilda-mode"),
+                            d = "center" === t396_getFieldValue(t, "valign", e, a),
+                            u = "grid" === t396_getFieldValue(t, "upscale", e, a),
+                            c = t396_getFieldValue(t, "height_vh", e, a),
+                            g = t396_getFieldValue(t, "height", e, a),
+                            s = (!!window.opr && !!window.opr.addons) || !!window.opera || -1 !== navigator.userAgent.indexOf(" OPR/");
+                        if (!n && d && !u && !c && g && !s) {
+                            for (var _ = parseFloat((r / e).toFixed(3)), f = [t, t.querySelector(".t396__carrier"), t.querySelector(".t396__filter")], i = 0; i < f.length; i++) f[i].style.height = Math.floor(parseInt(g, 10) * _) + "px";
+                            t396_scaleInitial__getElementsToScale(t).forEach(function (t) {
+                                t.style.zoom = _;
+                            });
+                        }
+                    }
+                }
+            }
+            function t396_scaleInitial__getElementsToScale(t) {
+                t = Array.prototype.slice.call(t.querySelectorAll(".t396__elem"));
+                if (!t.length) return [];
+                var e = [];
+                return (t = t.filter(function (t) {
+                    t = t.closest('.t396__group[data-group-type-value="physical"]');
+                    return !t || (-1 === e.indexOf(t) && e.push(t), !1);
+                })).concat(e);
+            }
+            function t396_getFieldValue(t, e, r, a) {
+                var l = a[a.length - 1],
+                    i = r === l ? t.getAttribute("data-artboard-" + e) : t.getAttribute("data-artboard-" + e + "-res-" + r);
+                if (!i)
+                    for (var o = 0; o < a.length; o++) {
+                        var n = a[o];
+                        if (!(n <= r) && (i = n === l ? t.getAttribute("data-artboard-" + e) : t.getAttribute("data-artboard-" + e + "-res-" + n))) break;
+                    }
+                return i;
+            }
+
+
+</script>
+<script src="{% static 'js/tilda-scripts-3.0.min.js' %}" charset="utf-8" defer="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/tilda-blocks-page38993393.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/tilda-lazyload-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/tilda-animation-2.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/tilda-zero-1.1.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/tilda-slds-1.4.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/hammer.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/tilda-menu-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/tilda-forms-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/tilda-zero-forms-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/tilda-animation-sbs-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/tilda-zoom-2.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/tilda-zero-scale-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/tilda-skiplink-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script src="{% static 'js/tilda-events-1.0.min.js' %}" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
+<script type="text/javascript">
+            window.dataLayer = window.dataLayer || [];
+
+
+</script>
+<script type="text/javascript">
+            (function () {
+                if (
+                    /bot|google|yandex|baidu|bing|msn|duckduckbot|teoma|slurp|crawler|spider|robot|crawling|facebook/i.test(navigator.userAgent) === false &&
+                    typeof sessionStorage != "undefined" &&
+                    sessionStorage.getItem("visited") !== "y" &&
+                    document.visibilityState
+                ) {
+                    var style = document.createElement("style");
+                    style.type = "text/css";
+                    style.innerHTML =
+                        "@media screen and (min-width: 980px) {.t-records {opacity: 0;}.t-records_animated {-webkit-transition: opacity ease-in-out .2s;-moz-transition: opacity ease-in-out .2s;-o-transition: opacity ease-in-out .2s;transition: opacity ease-in-out .2s;}.t-records.t-records_visible {opacity: 1;}}";
+                    document.getElementsByTagName("head")[0].appendChild(style);
+                    function t_setvisRecs() {
+                        var alr = document.querySelectorAll(".t-records");
+                        Array.prototype.forEach.call(alr, function (el) {
+                            el.classList.add("t-records_animated");
+                        });
+                        setTimeout(function () {
+                            Array.prototype.forEach.call(alr, function (el) {
+                                el.classList.add("t-records_visible");
+                            });
+                            sessionStorage.setItem("visited", "y");
+                        }, 400);
+                    }
+                    document.addEventListener("DOMContentLoaded", t_setvisRecs);
+                }
+            })();
+
+
+</script>
