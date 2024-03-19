@@ -438,7 +438,7 @@
                     <div class="t228__padding40px"></div>
                     <div class="t228__leftside">
                         <div class="t228__leftcontainer">
-                            <a href="/" class="t228__imgwrapper"><img class="t228__imglogo" src="{% static 'images/IMG_7259.png' %}"
+                            <a href="/" class="t228__imgwrapper"><img class="t228__imglogo" src="{% static 'images/IMG_7259.PNG' %}"
                                                                       imgfield="img" style="max-height: 80px;"
                                                                       alt="Company"/></a>
                         </div>
@@ -456,16 +456,16 @@
                                                                                         data-menu-submenu-hook=""
                                                                                         data-menu-item-number="3">Прайс
                                     загар</a></li>
-                                <li class="t228__list_item" style="padding: 0 15px;"><a class="t-menu__link-item"
-                                                                                        href="/academy"
-                                                                                        data-menu-submenu-hook=""
-                                                                                        data-menu-item-number="4">Обучение</a>
-                                </li>
-                                <li class="t228__list_item" style="padding: 0 15px;"><a class="t-menu__link-item"
-                                                                                        href="/academy#pricetagobychenie"
-                                                                                        data-menu-submenu-hook=""
-                                                                                        data-menu-item-number="5">Прайс
-                                    обучение</a></li>
+<!--                                <li class="t228__list_item" style="padding: 0 15px;"><a class="t-menu__link-item"-->
+<!--                                                                                        href="/academy"-->
+<!--                                                                                        data-menu-submenu-hook=""-->
+<!--                                                                                        data-menu-item-number="4">Обучение</a>-->
+<!--                                </li>-->
+<!--                                <li class="t228__list_item" style="padding: 0 15px;"><a class="t-menu__link-item"-->
+<!--                                                                                        href="/academy#pricetagobychenie"-->
+<!--                                                                                        data-menu-submenu-hook=""-->
+<!--                                                                                        data-menu-item-number="5">Прайс-->
+<!--                                    обучение</a></li>-->
                                 <li class="t228__list_item" style="padding: 0 15px;"><a class="t-menu__link-item"
                                                                                         href="/#order"
                                                                                         data-menu-submenu-hook=""
@@ -504,6 +504,7 @@
                                             </svg>
                                         </a>
                                     </li>
+                                    {% if instagram %}
                                     <li class="t-sociallinks__item t-sociallinks__item_instagram">
                                         <a href="{{ instagram }}"
                                            target="_blank" rel="nofollow" aria-label="instagram"
@@ -520,7 +521,7 @@
                                             </svg>
                                         </a>
                                     </li>
-                                    <!-- /new soclinks -->
+                                    {% endif %}
                                 </ul>
                             </div>
                         </div>
@@ -1171,6 +1172,7 @@
                             <div class="t-sociallinks">
                                 <ul role="list" class="t-sociallinks__wrapper" aria-label="Social media links">
                                     <!-- new soclinks -->
+                                    {% if instagram %}
                                     <li class="t-sociallinks__item t-sociallinks__item_instagram">
                                         <a href="{{ instagram }}"
                                            target="_blank" rel="nofollow" aria-label="instagram"
@@ -1187,6 +1189,7 @@
                                             </svg>
                                         </a>
                                     </li>
+                                    {% endif %}
                                     <li class="t-sociallinks__item t-sociallinks__item_whatsapp">
                                         <a href="https://wa.me/{{ tel }}" target="_blank" rel="nofollow"
                                            aria-label="whatsapp" style="width: 30px; height: 30px;">

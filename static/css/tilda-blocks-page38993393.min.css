@@ -2802,6 +2802,13 @@ img:not([src]) {
     }
 }
 
+.brand_line {
+    position: absolute;
+    background-color: rgb(194, 151, 116);
+    display: flex;
+    padding-top: 30px;
+}
+
 @media screen and (max-width:670px) {
     .t452__typo {
         font-size: 12px
