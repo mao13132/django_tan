@@ -16,6 +16,8 @@ class DataSiteModel(models.Model):
 
     og_description = models.CharField(max_length=255, blank=False, null=False, verbose_name=f'Подзаголовок')
 
+    address = models.TextField(blank=False, null=False, verbose_name=f'Адрес')
+
     class Meta:
         verbose_name = f'Настройка'
         verbose_name_plural = f'Главные настройки'
@@ -33,6 +35,7 @@ class DataSiteModel(models.Model):
                     one_pk = DataSiteModel.objects.first().id
 
                     DataSiteModel.objects.filter(pk=one_pk).update(
+                        address=self.address,
                         brand_name=self.brand_name, phone=self.phone,
                         title=self.title,
                         instagram=self.instagram,
@@ -49,6 +52,7 @@ class DataSiteModel(models.Model):
                 return True
             else:
                 DataSiteModel.objects.filter(pk=self.pk).update(
+                    address=self.address,
                     brand_name=self.brand_name,
                     phone=self.phone, title=self.title,
                     instagram=self.instagram,

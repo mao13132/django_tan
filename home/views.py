@@ -20,6 +20,7 @@ def index(request):
 
     context = {
         'brand_name': settings_sql.brand_name,
+        'address': settings_sql.address,
         'tel': settings_sql.phone,
         'instagram': settings_sql.instagram,
         'title': settings_sql.title,
