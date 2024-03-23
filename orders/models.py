@@ -1,5 +1,6 @@
 from datetime import datetime
 
+import pytz as pytz
 from django.db import models
 
 
@@ -12,9 +13,7 @@ class OrderModel(models.Model):
 
     date = models.DateTimeField(blank=True, null=True, default=datetime.now())
 
-    def __str__(self):
-        return f'Имя: {self.name}   ---   Телефон: {self.phone}   ---   ' \
-               f'Дата: {self.date.strftime("%Y-%m-%d %H:%M:%S")}   ---   ID: {self.id_client}'
+    comment = models.CharField(max_length=1255, blank=True, null=True, verbose_name=f'Комментарий')
 
     class Meta:
         verbose_name = f'Заказ'

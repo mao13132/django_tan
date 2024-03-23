@@ -8752,6 +8752,7 @@
 <!--    </div>-->
 
     <!--Мастера-->
+    {% if masters %}
     <div id="rec632185089" class="r t-rec t-rec_pt_150 t-rec_pb_150"
          style="padding-top: 150px; padding-bottom: 150px; background-color: #fffffa;" data-record-type="531"
          data-bg-color="#fffffa">
@@ -8770,7 +8771,7 @@
             <ul role="list" class="t531__container t-container">
 
                 <!--Мастера-->
-                {% if masters %}
+
                     {% for master in masters %}
                     <li class="t531__row" style="">
                         <div class="t-col t-col_4 t-prefix_1 t531__leftcol">
@@ -8809,7 +8810,7 @@
                         </div>
                     </li>
                     {% endfor %}
-                {% endif %}
+
                 <!--Мастера-->
 
             </ul>
@@ -9496,6 +9497,7 @@
 
         </script>
     </div>
+    {% endif %}
     <div id="rec632920236" class="r t-rec" style="" data-record-type="215"><a name="kontakt" style="font-size: 0;"></a>
     </div>
     <div id="rec654643623" class="r t-rec" style="background-color: #fffffa;" data-animationappear="off"
@@ -10082,13 +10084,13 @@
                         data-field-top-res-960-value="462"
                         data-field-left-res-960-value="41"
                 >
-                    {% if instagram %}
+                {% if instagram %}
                     <a class="tn-atom" href="{{ instagram }}">
                         <img class="tn-atom__img t-img"
                              data-original="{% static 'images/IMG_7267.PNG' %}"
                              alt="" imgfield="tn_img_1683913683366"/>
                     </a>
-                    {% endif %}
+                {% endif %}
                 </div>
                 <div
                         class="t396__elem tn-elem tn-elem__6546436231683913704706"

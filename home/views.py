@@ -1,4 +1,5 @@
 import asyncio
+from datetime import datetime
 
 from django.shortcuts import render
 
@@ -37,7 +38,8 @@ def index(request):
             'format_tel': change_number(settings_sql.phone),
             'form': FormHome(),
             'price_list': price_list,
-            'masters': master_list
+            'masters': master_list,
+            'year': datetime.now().year
 
         }
     except Exception as es:
@@ -74,7 +76,7 @@ def get_order(request):
 
             _msg = f'✅ Новая заявка {phone}%0A%0A' \
                    f'Имя: {name}%0A' \
-                   f'Телефон: <code>{phone}</code>'
+                   f'Телефон: 📞<code>{phone}</code>'
 
             asyncio.run(Telegram().new_order(_msg))
 
