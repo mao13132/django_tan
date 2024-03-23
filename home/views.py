@@ -2,10 +2,12 @@ import asyncio
 
 from django.shortcuts import render
 
+from data_site.modelMasters import MastersModel
 from data_site.modelPrice import PriceModel
 from data_site.modelsDataSite import DataSiteModel
 from home.formHome import FormHome
 from orders.models import OrderModel
+from utils.logger._logger import logger_msg
 from utils.logger.telegram.telegram_debug import Telegram
 from utils.utils import change_number
 
@@ -18,22 +20,30 @@ def index(request):
 
     price_list = PriceModel.objects.all()
 
-    context = {
-        'brand_name': settings_sql.brand_name,
-        'address': settings_sql.address,
-        'tel': settings_sql.phone,
-        'instagram': settings_sql.instagram,
-        'title': settings_sql.title,
-        'og_url': request.headers['host'],
-        'description': settings_sql.description,
-        'keywords': settings_sql.keywords,
-        'og_description': settings_sql.og_description,
-        'og_image': 'images/IMG_7259.PNG',
-        'format_tel': change_number(settings_sql.phone),
-        'form': FormHome(),
-        'price_list': price_list,
+    master_list = MastersModel.objects.all()
 
-    }
+    try:
+        context = {
+            'brand_name': settings_sql.brand_name,
+            'address': settings_sql.address,
+            'tel': settings_sql.phone,
+            'instagram': settings_sql.instagram,
+            'title': settings_sql.title,
+            'og_url': request.headers['host'],
+            'description': settings_sql.description,
+            'keywords': settings_sql.keywords,
+            'og_description': settings_sql.og_description,
+            'og_image': 'images/IMG_7259.PNG',
+            'format_tel': change_number(settings_sql.phone),
+            'form': FormHome(),
+            'price_list': price_list,
+            'masters': master_list
+
+        }
+    except Exception as es:
+        asyncio.run(logger_msg(f'Ошибка при формирования контекста "{es}"'))
+
+        context = {}
 
     response = render(request, 'index.html', context=context)
 
