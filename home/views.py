@@ -8,6 +8,7 @@ from data_site.modelPrice import PriceModel
 from data_site.modelsDataSite import DataSiteModel
 from home.formHome import FormHome
 from orders.models import OrderModel
+from utils.get_ip import get_client_ip
 from utils.logger._logger import logger_msg
 from utils.logger.telegram.telegram_debug import Telegram
 from utils.utils import change_number
@@ -57,6 +58,9 @@ def get_order(request):
         form = FormHome(request.POST)
 
         if form.is_valid():
+
+            ip = get_client_ip(request)
+
             name = form.cleaned_data['name']
 
             phone = form.cleaned_data['phone']
@@ -66,6 +70,8 @@ def get_order(request):
             order.name = name
 
             order.phone = phone
+
+            order.ip = ip
 
             try:
                 order.id_client = request.COOKIES['sessionid']
