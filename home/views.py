@@ -65,6 +65,8 @@ def get_order(request):
 
             phone = form.cleaned_data['phone']
 
+            url = request.POST.get('url', '-')
+
             order = OrderModel()
 
             order.name = name
@@ -72,6 +74,8 @@ def get_order(request):
             order.phone = phone
 
             order.ip = ip
+
+            order.url = url
 
             try:
                 order.id_client = request.COOKIES['sessionid']

@@ -10530,6 +10530,8 @@
 
                             {{ form.phone }}
 
+                            <input type="hidden" name="url" value="{{ request.get_full_path }}"/>
+
                             <button type="submit" class="submit_button">Отправить</button>
 
                             <div class="msg1">Вы соглашаетесь с нашими правилами и условиями обработки данных</div>

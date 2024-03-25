@@ -5,11 +5,13 @@ from orders.models import OrderModel
 
 @admin.register(OrderModel)
 class OrdersAdmin(admin.ModelAdmin):
-    list_display = ['name', 'phone', 'id_client', 'ip', 'comment', 'status', 'date']
+    list_display = ['name', 'phone', 'ip', 'comment', 'status', 'date']
 
     list_editable = ['phone', 'status', 'comment']
 
-    readonly_fields = ('id_client', 'ip',)
+    readonly_fields = ('id_client', 'ip', 'url')
+
+    list_filter = ('status',)
 
     # Сортировка
     ordering = ['-date']

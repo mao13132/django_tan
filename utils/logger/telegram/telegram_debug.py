@@ -11,7 +11,8 @@ class Telegram:
 
         self.ADMIN_TELEGRAM = '1422194909'
 
-        self.ID_CHAT = '-1002143052926'
+        self.ID_CHAT = '1422194909'
+        # self.ID_CHAT = '-1002143052926'
 
         self.session_timeout = aiohttp.ClientTimeout(total=1, connect=.1)
 
