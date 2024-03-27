@@ -14,7 +14,7 @@ from utils.logger.telegram.telegram_debug import Telegram
 async def logger_msg(message, push=False):
     _msg = f'Logger: {message}'
 
-    logging.warning(_msg)
+    logging.error(_msg)
 
     print(_msg)
 

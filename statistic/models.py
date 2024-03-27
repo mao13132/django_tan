@@ -10,7 +10,7 @@ class ClickersModule(models.Model):
     session_id = models.CharField(max_length=1000, blank=True, verbose_name=f'ID сессии')
     computer_name = models.CharField(max_length=1000, blank=True, verbose_name=f'Имя компьютера')
     processor_info = models.CharField(max_length=1000, blank=True, verbose_name=f'Информация о процессоре')
-    date = models.DateTimeField(blank=True, null=True, default=datetime.now(), verbose_name=f'Дата')
+    date = models.DateTimeField(blank=True, null=True, auto_now_add=True, verbose_name=f'Дата')
 
     class Meta:
         verbose_name = 'Клик'

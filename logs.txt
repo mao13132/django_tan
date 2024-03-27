@@ -11,3 +11,11 @@ autoreload.py:266 #INFO     [2024-03-27 Wednesday 16:37:30] - django.utils.autor
 autoreload.py:668 #INFO     [2024-03-27 Wednesday 16:37:32] - django.utils.autoreload - Watching for file changes with StatReloader
 autoreload.py:266 #INFO     [2024-03-27 Wednesday 16:38:45] - django.utils.autoreload - C:\Users\user\PycharmProjects\django_tan\utils\get_ip.py changed, reloading.
 autoreload.py:668 #INFO     [2024-03-27 Wednesday 16:38:47] - django.utils.autoreload - Watching for file changes with StatReloader
+autoreload.py:266 #INFO     [2024-03-27 Wednesday 16:42:10] - django.utils.autoreload - C:\Users\user\PycharmProjects\django_tan\statistic\models.py changed, reloading.
+autoreload.py:668 #INFO     [2024-03-27 Wednesday 16:42:12] - django.utils.autoreload - Watching for file changes with StatReloader
+autoreload.py:266 #INFO     [2024-03-27 Wednesday 16:42:33] - django.utils.autoreload - C:\Users\user\PycharmProjects\django_tan\orders\models.py changed, reloading.
+autoreload.py:668 #INFO     [2024-03-27 Wednesday 16:42:35] - django.utils.autoreload - Watching for file changes with StatReloader
+autoreload.py:266 #INFO     [2024-03-27 Wednesday 16:45:58] - django.utils.autoreload - C:\Users\user\PycharmProjects\django_tan\tan\settings.py changed, reloading.
+autoreload.py:668 #INFO     [2024-03-27 Wednesday 16:46:00] - django.utils.autoreload - Watching for file changes with StatReloader
+autoreload.py:266 #INFO     [2024-03-27 Wednesday 16:46:04] - django.utils.autoreload - C:\Users\user\PycharmProjects\django_tan\utils\logger\_logger.py changed, reloading.
+autoreload.py:668 #INFO     [2024-03-27 Wednesday 16:46:06] - django.utils.autoreload - Watching for file changes with StatReloader

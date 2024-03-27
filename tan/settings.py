@@ -20,7 +20,7 @@ logging.basicConfig(handlers=[logging.FileHandler(filename="./logs.txt",
                                                   encoding='utf-8', mode='a+')],
                     format=u'%(filename)s:%(lineno)d #%(levelname)-8s [%(asctime)s] - %(name)s - %(message)s',
                     datefmt="%F %A %T",
-                    level=logging.WARNING)
+                    level=logging.ERROR)
 
 load_dotenv('.env')
 
