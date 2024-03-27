@@ -1,0 +1,27 @@
+.animators {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.animators::before {
+    position: absolute;
+    content: '';
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0));
+    border-radius: 20px;
+    height: 100px;
+    width: 30px;
+    top: -20px;
+    left: 200px;
+    transform: rotate(45deg);
+    z-index: 5;
+    transition-property: all;
+    transition-duration: 1ms;
+    animation: fbutton 2s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes fbutton {
+    0% { left: -50px; }
+    100% { left: 230px; }
+}

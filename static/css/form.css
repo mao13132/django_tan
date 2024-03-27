@@ -28,6 +28,29 @@
     height: 56px;
     font-size: 16px;
     font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+.submit_button::before {
+    position: absolute;
+    content: '';
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0));
+    border-radius: 20px;
+    height: 100px;
+    width: 30px;
+    top: -20px;
+    left: -50px;
+    transform: rotate(45deg);
+    z-index: 5;
+    transition-property: all;
+    transition-duration: 1ms;
+    animation: bottonx 3s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes bottonx {
+    0% { left: -50px; }
+    100% { left: 730px; }
 }
 
 .msg1 {
