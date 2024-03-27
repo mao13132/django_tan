@@ -7,17 +7,18 @@ from data_site.modelMasters import MastersModel
 from data_site.modelPrice import PriceModel
 from data_site.modelsDataSite import DataSiteModel
 from home.formHome import FormHome
+from home.save_statistic import save_click_from_statistic
 from orders.models import OrderModel
+from statistic.models import ClickersModule
 from utils.get_ip import get_client_ip
 from utils.logger._logger import logger_msg
 from utils.logger.telegram.telegram_debug import Telegram
 from utils.utils import change_number
 
 
-# TODO проверить og
-
-
 def index(request):
+    save_statistic = save_click_from_statistic(request)
+
     settings_sql = DataSiteModel.objects.first()
 
     price_list = PriceModel.objects.all()

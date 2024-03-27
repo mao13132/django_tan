@@ -9,11 +9,18 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
-from pathlib import Path
+import logging
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+
+logger = logging.getLogger()
+
+logging.basicConfig(handlers=[logging.FileHandler(filename="./logs.txt",
+                                                  encoding='utf-8', mode='a+')],
+                    format=u'%(filename)s:%(lineno)d #%(levelname)-8s [%(asctime)s] - %(name)s - %(message)s',
+                    datefmt="%F %A %T",
+                    level=logging.WARNING)
 
 load_dotenv('.env')
 
@@ -45,6 +52,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'data_site.apps.DataSiteConfig',
     'orders.apps.OrdersConfig',
+    'statistic.apps.StatisticConfig',
 ]
 
 MIDDLEWARE = [
